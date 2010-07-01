@@ -137,15 +137,15 @@ LIST defaults to all existing live buffers."
 (add-hook 'window-setup-hook 'maximize-frame t)
 (add-hook 'window-setup-hook 'ecb-redraw-layout t)
 
-(set-background-color "#2b2b2b")
-(set-foreground-color "white")
-(set-face-background 'modeline "DarkRed")
-(set-face-foreground 'modeline "white")
+;(set-background-color "#2b2b2b")
+;(set-foreground-color "white")
+;(set-face-background 'modeline "DarkRed")
+;(set-face-foreground 'modeline "white")
 ;; color-theme
-;(add-to-list  'load-path "~/.emacs.d/plugins/color-theme")
-;(require 'color-theme)
-;    (color-theme-initialize)
-;    (color-theme-arjen)
+(add-to-list  'load-path "~/.emacs.d/plugins/color-theme")
+(require 'color-theme)
+    (color-theme-initialize)
+    (color-theme-lethe)
 
 
 (mouse-wheel-mode t)
@@ -475,6 +475,9 @@ makes)."
 
 ;; yasnippet rails
 (load "~/.emacs.d/plugins/yasnippets-rails/setup.el")
+
+;; yasnippet rspec
+(load "~/.emacs.d/plugins/yasnippets-rspec/setup.el")
 
 
 (add-to-list 'load-path "~/.emacs.d/plugins/autotest")
