@@ -14,9 +14,8 @@ Provides the following plugins:
 anything
 auto-complete
 autotest
-cedet (http://cedet.sourceforge.net/)
 color-theme
-ecb (http://ecb.sourceforge.net/)
+ecb (submodule => http://github.com/emacsmirror/ecb.git)
 find-recursive
 flymake
 javascript
@@ -29,15 +28,33 @@ rinari (http://rinari.rubyforge.org/)
 ruby-block
 ruby-mode (svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby | svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8)
 toggle
-yaml-mode
-yasnippet (http://code.google.com/p/yasnippet/)
+yaml-mode (submodule => http://github.com/emacsmirror/yaml-mode.git)
+yasnippet (submodule => http://github.com/emacsmirror/ecb.git)
 yasnippets-rails (http://github.com/eschulte/yasnippets-rails/tree/master)
-
+yasnippets-rspec (submodule => http://github.com/emacsmirror/yasnippets-rspec.git)
 
 INSTALLATION
 ------------
 
-Copy all the files to ~/.emacs.d directory
+You have lots of choises
+
+1. Copy all the files to ~/.emacs.d directory and run
+
+   git submodule update --init
+
+2. link to directory
+
+   ln -s path/to/my_emacs_for_rails ~/.emacs.d
+
+3. use bundled rake file for install and update (default behavior updates)
+
+   to install and update:
+
+   rake install
+
+   to update:
+
+   rake
 
 
 FONT
