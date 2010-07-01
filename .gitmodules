@@ -13,7 +13,3 @@
 [submodule "yaml-mode"]
 	path = plugins/yaml-mode
 	url = http://github.com/emacsmirror/yaml-mode.git
-
-[submodule "rsense"]
-	path = plugins/rsense
-	url = http://github.com/Samsinite/rsense.git
