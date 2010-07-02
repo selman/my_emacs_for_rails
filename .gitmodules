@@ -13,3 +13,6 @@
 [submodule "yaml-mode"]
 	path = plugins/yaml-mode
 	url = http://github.com/emacsmirror/yaml-mode.git
+[submodule "plugins/auto-complete"]
+	path = plugins/auto-complete
+	url = http://github.com/emacsmirror/auto-complete.git

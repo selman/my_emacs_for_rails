@@ -1,7 +1,8 @@
 REQUIREMENTS
 ------------
 
-The current release was tested under Emacs 23.
+Emacs >= 23.2
+rake for intall
 Rcodetools for auto-complete (gem install rcodetools)
 
 
@@ -12,7 +13,7 @@ Emacs init file and plugins to enhance Ruby on Rails development experience.
 
 Provides the following plugins:
 anything
-auto-complete
+auto-complete (submodule => http://github.com/emacsmirror/auto-complete.git)
 autotest
 color-theme
 ecb (submodule => http://github.com/emacsmirror/ecb.git)
@@ -33,6 +34,7 @@ yasnippet (submodule => http://github.com/emacsmirror/ecb.git)
 yasnippets-rails (http://github.com/eschulte/yasnippets-rails/tree/master)
 yasnippets-rspec (submodule => http://github.com/emacsmirror/yasnippets-rspec.git)
 
+
 INSTALLATION
 ------------
 
@@ -40,11 +42,14 @@ You have lots of choises
 
 1. Copy all the files to ~/.emacs.d directory and run
 
+   cd ~/.emacs.d
    git submodule update --init
+   cp init.el.example init.el
 
 2. link to directory
 
    ln -s path/to/my_emacs_for_rails ~/.emacs.d
+   cd ~/.emacs.d && cp init.el.example init.el
 
 3. use bundled rake file for install and update (default behavior updates)
 

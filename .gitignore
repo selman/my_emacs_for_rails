@@ -14,5 +14,6 @@ tmtags
 *.swp
 
 ## PROJECT::GENERAL
+ac-comphist.dat
 auto-save-list
 init.el

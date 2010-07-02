@@ -10,6 +10,7 @@ task :install do
     File.directory?(emacsd) ? File.rename(emacsd, "#{emacsd}.bak") : File.unlink(emacsd)
   end
   FileUtils.ln_s Dir.pwd, emacsd
+  FileUtils.cp 'init.el.example' 'init.el'
   Rake::Task[:update].invoke
 end
 
@@ -21,5 +22,3 @@ task :update do
   puts "updating submodules"
   `git submodule update --init`
 end
-
-

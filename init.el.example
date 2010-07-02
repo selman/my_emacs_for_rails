@@ -311,6 +311,7 @@ t)
 (add-hook 'ruby-mode-hook 'turn-on-font-lock)
 (add-to-list 'auto-mode-alist '("\\.rjs$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 
 ;; ruby-block
 (add-to-list 'load-path "~/.emacs.d/plugins/ruby-block")
@@ -499,7 +500,9 @@ makes)."
 
 
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/dict")
 (require 'auto-complete-config)
+(ac-config-default)
 ;(global-auto-complete-mode t)
 ;(define-key ac-complete-mode-map "\C-n" 'ac-next)
 ;(define-key ac-complete-mode-map "\C-p" 'ac-previous)
