@@ -1,8 +1,9 @@
 REQUIREMENTS
 ------------
 
+ruby
 Emacs >= 23.2
-rake for intall
+rake for intall and update
 Rcodetools for auto-complete (gem install rcodetools)
 
 
@@ -27,7 +28,7 @@ redo
 ri-emacs
 rinari (http://rinari.rubyforge.org/)
 ruby-block
-ruby-mode (svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby | svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8)
+ruby-mode (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
 toggle
 yaml-mode (submodule => http://github.com/emacsmirror/yaml-mode.git)
 yasnippet (submodule => http://github.com/emacsmirror/ecb.git)
@@ -40,18 +41,7 @@ INSTALLATION
 
 You have lots of choises
 
-1. Copy all the files to ~/.emacs.d directory and run
-
-   cd ~/.emacs.d
-   git submodule update --init
-   cp init.el.example init.el
-
-2. link to directory
-
-   ln -s path/to/my_emacs_for_rails ~/.emacs.d
-   cd ~/.emacs.d && cp init.el.example init.el
-
-3. use bundled rake file for install and update (default behavior updates)
+1. use bundled rake file for install and update (default behavior updates)
 
    to install and update:
 
@@ -60,6 +50,19 @@ You have lots of choises
    to update:
 
    rake
+
+2. link to directory
+
+   ln -s path/to/my_emacs_for_rails ~/.emacs.d
+   cd ~/.emacs.d
+   git submodule update --init
+   cp init.el.example init.el
+
+3. Copy all the files to ~/.emacs.d directory and run
+
+   cd ~/.emacs.d
+   git submodule update --init
+   cp init.el.example init.el
 
 
 FONT

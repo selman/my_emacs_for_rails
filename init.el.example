@@ -145,7 +145,7 @@ LIST defaults to all existing live buffers."
 (add-to-list  'load-path "~/.emacs.d/plugins/color-theme")
 (require 'color-theme)
     (color-theme-initialize)
-    (color-theme-lethe)
+    (color-theme-clarity)
 
 
 (mouse-wheel-mode t)

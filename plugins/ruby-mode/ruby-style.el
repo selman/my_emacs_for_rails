@@ -4,7 +4,7 @@
 ;;;
 ;;; C/C++ mode style for Ruby.
 ;;;
-;;;  $Author: akr $
+;;;  $Author: nobu $
 ;;;  created at: Thu Apr 26 13:54:01 JST 2007
 ;;;
 ;;; To switch to the "ruby" style automatically if it looks like a
@@ -17,11 +17,11 @@
 ;;; Customize the c-default-style variable to set the default style
 ;;; for each CC major mode.
 
-(defconst ruby-style-revision "$Revision: 25189 $"
+(defconst ruby-style-revision "$Revision: 28010 $"
   "Ruby style revision string.")
 
 (defconst ruby-style-version
-  (progn
+  (and
    (string-match "[0-9.]+" ruby-style-revision)
    (substring ruby-style-revision (match-beginning 0) (match-end 0)))
   "Ruby style version number.")

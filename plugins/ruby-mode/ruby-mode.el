@@ -46,7 +46,7 @@
 
 ;;; Code:
 
-(defconst ruby-mode-revision "$Revision: 25189 $"
+(defconst ruby-mode-revision "$Revision: 28107 $"
   "Ruby mode revision string.")
 
 (defconst ruby-mode-version
@@ -121,13 +121,15 @@
                (match-string 6)))))
 
 (defun ruby-here-doc-beg-match ()
-  (let ((contents (regexp-quote (concat (match-string 2) (match-string 3)))))
+  (let ((contents (concat
+		   (regexp-quote (concat (match-string 2) (match-string 3)))
+		   (if (string= (match-string 3) "_") "\\B" "\\b"))))
     (concat "<<"
             (let ((match (match-string 1)))
               (if (and match (> (length match) 0))
                   (concat "\\(?:-\\([\"']?\\)\\|\\([\"']\\)" (match-string 1) "\\)"
-                          contents "\\b\\(\\1\\|\\2\\)")
-                (concat "-?\\([\"']\\|\\)" contents "\\b\\1"))))))
+                          contents "\\(\\1\\|\\2\\)")
+                (concat "-?\\([\"']\\|\\)" contents "\\1"))))))
 
 (defconst ruby-delimiter
   (concat "[?$/%(){}#\"'`.:]\\|<<\\|\\[\\|\\]\\|\\<\\("
@@ -170,7 +172,9 @@
   (define-key ruby-mode-map "\t" 'ruby-indent-command)
   (define-key ruby-mode-map "\C-c\C-e" 'ruby-insert-end)
   (define-key ruby-mode-map "\C-j" 'ruby-reindent-then-newline-and-indent)
-  (define-key ruby-mode-map "\C-m" 'newline))
+  (define-key ruby-mode-map "\C-m" 'newline)
+  (define-key ruby-mode-map "\C-c\C-c" 'comment-region)
+  (define-key ruby-mode-map "\C-c\C-u" 'uncomment-region))
 
 (defvar ruby-mode-syntax-table nil
   "Syntax table in use in ruby-mode buffers.")
@@ -338,7 +342,7 @@ Also ignores spaces after parenthesis when 'space."
                             (cdr (assq coding-system ruby-encoding-map)))
                        coding-system))
                 "ascii-8bit"))
-        (if (looking-at "^#![^\n]*ruby") (beginning-of-line 2))
+        (if (looking-at "^#!") (beginning-of-line 2))
         (cond ((looking-at "\\s *#.*-\*-\\s *\\(en\\)?coding\\s *:\\s *\\([-a-z0-9_]*\\)\\s *\\(;\\|-\*-\\)")
                (unless (string= (match-string 2) coding-system)
                  (goto-char (match-beginning 2))

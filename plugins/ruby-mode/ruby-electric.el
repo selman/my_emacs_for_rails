@@ -196,10 +196,5 @@ strings. Note that you must have Font Lock enabled."
        (save-excursion 
          (insert "|"))))
 
-(defun ruby-insert-end ()
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
 
 (provide 'ruby-electric)
