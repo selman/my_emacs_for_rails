@@ -9,8 +9,8 @@ task :install do
   if File.exist?(emacsd)
     File.directory?(emacsd) ? File.rename(emacsd, "#{emacsd}.bak") : File.unlink(emacsd)
   end
-  FileUtils.ln_s Dir.pwd, emacsd
-  FileUtils.cp 'init.el.example' 'init.el'
+  FileUtils.ln_s(Dir.pwd, emacsd)
+  FileUtils.cp('init.el.example', 'init.el') unless File.exist?('init.el')
   Rake::Task[:update].invoke
 end
 
