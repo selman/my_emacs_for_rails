@@ -311,11 +311,13 @@ t)
 (add-hook 'ruby-mode-hook 'turn-on-font-lock)
 (add-to-list 'auto-mode-alist '("\\.rjs$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 
 ;; ruby-block
 (add-to-list 'load-path "~/.emacs.d/plugins/ruby-block")
 (require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle 'overlay)
 
 ;; ruby electric
 (defun try-complete-abbrev (old)

@@ -4,7 +4,7 @@ REQUIREMENTS
 ruby
 Emacs >= 23.2
 rake for intall and update
-Rcodetools for auto-complete (gem install rcodetools)
+rcodetools for auto-complete (gem install rcodetools)
 
 
 DESCRIPTION
@@ -27,7 +27,7 @@ rdebug
 redo
 ri-emacs
 rinari (http://rinari.rubyforge.org/)
-ruby-block
+ruby-block (submodule => http://github.com/emacsmirror/ruby-block.git)
 ruby-mode (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
 toggle
 yaml-mode (submodule => http://github.com/emacsmirror/yaml-mode.git)
@@ -97,4 +97,3 @@ CONTACT
 You can contact me: santiago@wyeworks.com
 Follow us in our blog: http://blog.wyeworks.com
 Repo: git://github.com/spastorino/my_emacs_for_rails.git
-

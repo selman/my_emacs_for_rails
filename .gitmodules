@@ -16,3 +16,6 @@
 [submodule "plugins/auto-complete"]
 	path = plugins/auto-complete
 	url = http://github.com/emacsmirror/auto-complete.git
+[submodule "plugins/ruby-block"]
+	path = plugins/ruby-block
+	url = http://github.com/emacsmirror/ruby-block.git
