@@ -19,3 +19,6 @@
 [submodule "plugins/ruby-block"]
 	path = plugins/ruby-block
 	url = http://github.com/emacsmirror/ruby-block.git
+[submodule "plugins/textmate"]
+	path = plugins/textmate
+	url = http://github.com/emacsmirror/textmate.git

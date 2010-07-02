@@ -29,7 +29,7 @@ ri-emacs
 rinari (http://rinari.rubyforge.org/)
 ruby-block (submodule => http://github.com/emacsmirror/ruby-block.git)
 ruby-mode (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
-toggle
+textmate (submodule => http://github.com/emacsmirror/textmate.git)
 yaml-mode (submodule => http://github.com/emacsmirror/yaml-mode.git)
 yasnippet (submodule => http://github.com/emacsmirror/ecb.git)
 yasnippets-rails (http://github.com/eschulte/yasnippets-rails/tree/master)
