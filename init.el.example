@@ -211,11 +211,6 @@ LIST defaults to all existing live buffers."
 (ido-mode t)
 
 
-;; tabkey2
-;(load "~/.emacs.d/plugins/nxhtml/util/tabkey2.el")
-
-
-
 ;; DTD mode
 (autoload 'dtd-mode "tdtd" "Major mode for SGML and XML DTDs." t)
 (autoload 'dtd-etags "tdtd" "Execute etags on FILESPEC and match on DTD-specific regular expressions." t)
@@ -368,23 +363,6 @@ t)
            (define-key ruby-mode-map "\M-\C-o" 'rct-complete-symbol)
            (local-set-key (kbd "<return>") 'newline-and-indent)
 ))
-
-
-;; nxhtml
-;(setq *nxhtml-autostart-file* (expand-file-name "~/.emacs.d/plugins/nxhtml/autostart.el"))
-;(load *nxhtml-autostart-file*)
-;(setq
-;      nxhtml-global-minor-mode t
-;      mumamo-chunk-coloring 'submode-colored
-;      nxhtml-skip-welcome t
-;      indent-region-mode t
-;      nxhtml-default-encoding "utf8"
-;      rng-nxml-auto-validate-flag nil
-;      nxml-degraded t)
-;(add-to-list 'auto-mode-alist '("\\.html$" . nxhtml-mumamo-mode))
-;(add-to-list 'auto-mode-alist '("\\.html\\.erb$" . eruby-nxhtml-mumamo-mode))
-;(add-hook 'nxhtml-mumamo-mode-hook 'tabkey2-mode)
-;(add-hook 'eruby-nxhtml-mumamo-mode-hook 'tabkey2-mode)
 
 
 ;; flymake
