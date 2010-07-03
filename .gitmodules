@@ -1,15 +1,12 @@
 [submodule "ecb"]
         path = plugins/ecb
 	url = http://github.com/emacsmirror/ecb.git
-
 [submodule "yasnippet"]
 	path = plugins/yasnippet
 	url = http://github.com/emacsmirror/yasnippet.git
-
 [submodule "yasnippets-rspec"]
 	path = plugins/yasnippets-rspec
 	url = http://github.com/emacsmirror/yasnippets-rspec.git
-
 [submodule "yaml-mode"]
 	path = plugins/yaml-mode
 	url = http://github.com/emacsmirror/yaml-mode.git
