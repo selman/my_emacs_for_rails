@@ -1,11 +1,11 @@
 REQUIREMENTS
 ------------
 
-ruby
 Emacs >= 23.2
-rake for intall and update
-rcodetools for auto-complete (gem install rcodetools)
-spidermonkey >= 1.7.0 for flymake-javascript (http://ftp.mozilla.org/pub/mozilla.org/js/ or from package management) 
+ruby & rake for intall and update
+rcodetools for multiple tools http://eigenclass.org/hiki.rb?rcodetools (gem install rcodetools)
+spidermonkey >= 1.7.0 for flymake-javascript (http://ftp.mozilla.org/pub/mozilla.org/js/ or from package management)
+JRE >= 1.5.0 for rsense completions SunJDK and OpenJDK are supported
 
 
 DESCRIPTION
@@ -14,7 +14,7 @@ DESCRIPTION
 Emacs init file and plugins to enhance Ruby on Rails development experience.
 
 Provides the following plugins:
-anything
+
 auto-complete    (submodule => http://github.com/emacsmirror/auto-complete.git)
 autotest
 color-theme
@@ -25,8 +25,8 @@ flymake-javascript
 rcodetools       (http://eigenclass.org/hiki.rb?rcodetools)
 rdebug
 redo
-ri-emacs
 rinari           (http://rinari.rubyforge.org/)
+rsense           (copied => http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2)
 ruby-block       (submodule => http://github.com/emacsmirror/ruby-block.git)
 ruby-mode        (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
 textmate         (submodule => http://github.com/emacsmirror/textmate.git)

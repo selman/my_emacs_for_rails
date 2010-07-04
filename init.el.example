@@ -186,24 +186,9 @@ LIST defaults to all existing live buffers."
 (require 'find-recursive)
 
 
-;; anything
-(add-to-list 'load-path "~/.emacs.d/plugins/anything")
-(require 'anything)
-
-;; anything-rcodetools
+;; rcodetools
 (add-to-list 'load-path "~/.emacs.d/plugins/rcodetools")
-;(require 'rcodetools)
-;(require 'icicles-rcodetools)
-;(require 'anything)
-(require 'anything-rcodetools)
-;;       ;; Command to get all RI entries.
-(setq rct-get-all-methods-command "PAGER=cat fri -l -L")
-;;       (setq rct-get-all-methods-command "PAGER=cat fri -l")
-;(setq rct-get-all-methods-command "PAGER=cat ri -l")
-;;       ;; See docs
-;; (define-key ruby-mode-map "\M-\C-i" 'rct-complete-symbol)
-(define-key anything-map "\C-z" 'anything-execute-persistent-action)
-;(rct-get-all-methods)
+(require 'rcodetools)
 
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
@@ -271,12 +256,6 @@ LIST defaults to all existing live buffers."
 (setq rdebug-short-key-mode t)
 
 
-;; ri-emacs
-(setq ri-ruby-script (expand-file-name "~/.emacs.d/plugins/ri-emacs/ri-emacs.rb"))
-;(autoload 'ri (expand-file-name "~/.emacs.d/plugins/ri-emacs/ri-ruby.el") nil t)
-(load "~/.emacs.d/plugins/ri-emacs/ri-ruby.el")
-
-
 ;; ruby-mode-hook
 (add-hook 'ruby-mode-hook
          (lambda()
@@ -335,7 +314,7 @@ LIST defaults to all existing live buffers."
 
 (when flymake-js-detect-trailing-comma
   (setq flymake-js-err-line-patterns (append flymake-js-err-line-patterns
-					     '(("^\\(.+\\)\:\\([0-9]+\\)\: \\(strict warning: trailing comma.+\\)\:$" 1 2 nil 3)))))
+                                             '(("^\\(.+\\)\:\\([0-9]+\\)\: \\(strict warning: trailing comma.+\\)\:$" 1 2 nil 3)))))
 
 (defun flymake-js-init ()
   (list "js" (list "-s" (flymake-init-create-temp-buffer-copy
@@ -391,6 +370,12 @@ LIST defaults to all existing live buffers."
                (local-set-key [tab] 'yas/expand))))
 
 
+;; rsense
+(setq rsense-home (expand-file-name "~/.emacs.d/plugins/rsense"))
+(add-to-list 'load-path (concat rsense-home "/etc"))
+(require 'rsense)
+
+
 (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/dict")
 (require 'auto-complete-config)
@@ -437,9 +422,10 @@ LIST defaults to all existing live buffers."
              (lambda ()
                (setq ac-sources '(ac-source-yasnippet ac-source-abbrev ac-source-files-in-current-dir ac-source-words-in-buffer))))
 
-   (add-hook 'ruby-mode-hook
-             (lambda ()
-               (setq ac-omni-completion-sources '(("\\.\\=" ac-source-rcodetools)))));)
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-rsense-method)
+            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
 
 
 ;; ri
@@ -462,4 +448,3 @@ LIST defaults to all existing live buffers."
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
-
