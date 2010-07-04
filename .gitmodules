@@ -16,9 +16,6 @@
 [submodule "plugins/ruby-block"]
 	path = plugins/ruby-block
 	url = http://github.com/emacsmirror/ruby-block.git
-[submodule "plugins/textmate"]
-	path = plugins/textmate
-	url = http://github.com/emacsmirror/textmate.git
 [submodule "plugins/yasnippets-rails"]
 	path = plugins/yasnippets-rails
 	url = http://github.com/eschulte/yasnippets-rails.git
@@ -28,3 +25,6 @@
 [submodule "plugins/redo-plus"]
 	path = plugins/redo-plus
 	url = http://github.com/emacsmirror/redo-plus.git
+[submodule "plugins/textmate"]
+	path = plugins/textmate
+	url = http://github.com/selman/textmate.el.git

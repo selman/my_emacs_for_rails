@@ -89,7 +89,6 @@ TODO complete ...
 TODO
 ----
 
-- when ruby or javascript files opened with textmate-goto-file (M-t) flymake giving error and closing.
 - Fix problems with certain key combinations. Sometimes Emacs debugger appears and its a bit annoying.
 - Problems between autocompletion and tabkey2-mode when editing .html.erb files the suggestions doesn't work well
 
