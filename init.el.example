@@ -350,7 +350,12 @@ LIST defaults to all existing live buffers."
 
 
 (add-to-list 'load-path "~/.emacs.d/plugins/autotest")
+(require 'toggle)
+(require 'unit-test)
 (require 'autotest)
+(setq autotest-use-ui t)
+;; using rspec configure here
+;(setq autotest-command "autospec -q")
 
 
 ;; rhtml-mode

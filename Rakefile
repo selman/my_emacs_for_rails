@@ -5,9 +5,9 @@ task :default => ["update"]
 desc "installs my emacs for rails"
 task :install do
   puts "preparing \".emacs.d\" directory"
-  emacsd = File.join(ENV[:HOME], '.emacs.d') || nil
+  emacsd = File.join(ENV[:HOME], '.emacs.d')
   if File.exist?(emacsd)
-    File.directory?(emacsd) ? File.rename(emacsd, "#{emacsd}.bak") : File.unlink(emacsd)
+    File.symlink?(emacsd) ? File.unlink(emacsd) : File.rename(emacsd, "#{emacsd}.bak")
   end
   FileUtils.ln_s(Dir.pwd, emacsd)
   FileUtils.cp('init.el', 'init.el.bak') if File.exist?('init.el')
@@ -18,9 +18,14 @@ end
 desc "updates my emacs for rails and submodules"
 task :update do
   puts "updating"
-  `git pull`
+  system("git pull")
   puts "updating submodules"
-  `git submodule update --init`
+  system("git submodule update --init")
+  Rake::Task[:rsense].invoke
+end
+
+desc "updates #{ENV[:HOME]}/.rsense run this after every gem install to get new completions"
+task :rsense do
   puts "creating .rsense file"
-  `ruby plugins/rsense/etc/config.rb > #{ENV[:HOME]}/.rsense`
+  system("ruby plugins/rsense/etc/config.rb > #{ENV[:HOME]}/.rsense")
 end
