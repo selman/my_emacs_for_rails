@@ -22,5 +22,5 @@ task :update do
   puts "updating submodules"
   `git submodule update --init`
   puts "creating .rsense file"
-  `ruby plugins/rsense/etc/config.rb > #{ENV[:HOME]}\.rsense`
+  `ruby plugins/rsense/etc/config.rb > #{ENV[:HOME]}/.rsense`
 end
