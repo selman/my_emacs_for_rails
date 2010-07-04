@@ -25,3 +25,6 @@
 [submodule "plugins/rhtml"]
 	path = plugins/rhtml
 	url = http://github.com/emacsmirror/rhtml.git
+[submodule "plugins/redo-plus"]
+	path = plugins/redo-plus
+	url = http://github.com/emacsmirror/redo-plus.git

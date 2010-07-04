@@ -24,7 +24,7 @@ flymake-ruby
 flymake-javascript
 rcodetools       (http://eigenclass.org/hiki.rb?rcodetools)
 rdebug
-redo
+redo+            (submodule => http://github.com/emacsmirror/redo-plus.git)
 rinari           (http://rinari.rubyforge.org/)
 rsense           (copied => http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2)
 ruby-block       (submodule => http://github.com/emacsmirror/ruby-block.git)

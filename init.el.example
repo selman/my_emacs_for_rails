@@ -48,10 +48,12 @@
 (require 'textmate)
 (textmate-mode)
 
-;; redo
-(add-to-list  'load-path "~/.emacs.d/plugins/redo")
-(require 'redo)
-(global-set-key [(control -)] 'redo)
+
+;; redo+
+(add-to-list  'load-path "~/.emacs.d/plugins/redo-plus")
+(require 'redo+)
+;(setq undo-no-redo t)
+(global-set-key (kbd "C-?") 'redo)
 
 
 ;; show ascii table
