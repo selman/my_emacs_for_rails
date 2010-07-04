@@ -183,11 +183,6 @@ LIST defaults to all existing live buffers."
 ; '(show-paren-mode t))
 
 
-;; find-recursive
-(add-to-list 'load-path "~/.emacs.d/plugins/find-recursive")
-(require 'find-recursive)
-
-
 ;; rcodetools
 (add-to-list 'load-path "~/.emacs.d/plugins/rcodetools")
 (require 'rcodetools)

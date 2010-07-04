@@ -3,6 +3,7 @@ REQUIREMENTS
 
 Emacs >= 23.2
 ruby & rake for intall and update
+ruby-debug for rdebug emacs mode (gem install ruby-debug or gem install ruby-debug19)
 rcodetools for multiple tools http://eigenclass.org/hiki.rb?rcodetools (gem install rcodetools)
 spidermonkey >= 1.7.0 for flymake-javascript (http://ftp.mozilla.org/pub/mozilla.org/js/ or from package management)
 JRE >= 1.5.0 for rsense completions SunJDK and OpenJDK are supported
@@ -15,25 +16,24 @@ Emacs init file and plugins to enhance Ruby on Rails development experience.
 
 Provides the following plugins:
 
-auto-complete    (submodule => http://github.com/emacsmirror/auto-complete.git)
+auto-complete     (submodule => http://github.com/emacsmirror/auto-complete.git)
 autotest
 color-theme
-ecb              (submodule => http://github.com/emacsmirror/ecb.git)
-find-recursive
+ecb               (submodule => http://github.com/emacsmirror/ecb.git)
 flymake-ruby
 flymake-javascript
-rcodetools       (http://eigenclass.org/hiki.rb?rcodetools)
+rcodetools        (http://eigenclass.org/hiki.rb?rcodetools)
 rdebug
-redo+            (submodule => http://github.com/emacsmirror/redo-plus.git)
-rinari           (http://rinari.rubyforge.org/)
-rsense           (copied => http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2)
-ruby-block       (submodule => http://github.com/emacsmirror/ruby-block.git)
-ruby-mode        (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
-textmate         (submodule => http://github.com/emacsmirror/textmate.git)
-yaml-mode 	 (submodule => http://github.com/emacsmirror/yaml-mode.git)
-yasnippet 	 (submodule => http://github.com/emacsmirror/ecb.git)
-yasnippets-rails (submodule => http://github.com/eschulte/yasnippets-rails.git)
-yasnippets-rspec (submodule => http://github.com/emacsmirror/yasnippets-rspec.git)
+redo+             (submodule => http://github.com/emacsmirror/redo-plus.git)
+rinari            (http://rinari.rubyforge.org/)
+rsense            (copied => http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2)
+ruby-block        (submodule => http://github.com/emacsmirror/ruby-block.git)
+ruby-mode         (copied => svn co http://svn.ruby-lang.org/repos/ruby/trunk/misc)
+textmate          (submodule => http://github.com/emacsmirror/textmate.git)
+yaml-mode 	  (submodule => http://github.com/emacsmirror/yaml-mode.git)
+yasnippet 	  (submodule => http://github.com/emacsmirror/ecb.git)
+yasnippets-rails  (submodule => http://github.com/eschulte/yasnippets-rails.git)
+yasnippets-rspec  (submodule => http://github.com/emacsmirror/yasnippets-rspec.git)
 
 
 INSTALLATION
@@ -89,6 +89,7 @@ TODO complete ...
 TODO
 ----
 
+- when ruby or javascript files opened with textmate-goto-file (M-t) flymake giving error and closing.
 - Fix problems with certain key combinations. Sometimes Emacs debugger appears and its a bit annoying.
 - Problems between autocompletion and tabkey2-mode when editing .html.erb files the suggestions doesn't work well
 
