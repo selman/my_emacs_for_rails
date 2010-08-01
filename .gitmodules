@@ -27,4 +27,4 @@
 	url = http://github.com/emacsmirror/redo-plus.git
 [submodule "plugins/textmate"]
 	path = plugins/textmate
-	url = http://github.com/selman/textmate.el.git
+	url = http://github.com/defunkt/textmate.el.git
